@@ -131,7 +131,7 @@ resource "aws_security_group_rule""allowall" {
 }
 #instance lauch
 resource "aws_instance" "instance1" {
-    ami           = "ami-03a6eaae9938c858c"  
+    ami           = ""  
     instance_type = "t2.micro"
     subnet_id     = aws_subnet.pubsub.id
     security_groups = ["aws_security_group_rule.allowall.id"]
@@ -140,7 +140,7 @@ resource "aws_instance" "instance1" {
 }
 
 resource "aws_instance" "instance2" {
-    ami           = "ami-053b0d53c279acc90"  
+    ami           = ""  
     instance_type = "t2.micro"
     subnet_id     = aws_subnet.prisub.id
     security_groups = ["aws_security_group_rule.allowall.id"]
